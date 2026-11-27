@@ -1,4 +1,107 @@
-# Job 01 – Documentation sur l'EDR
+# EDR – Libérer le cyberdétective : créer une expérience de laboratoire EDR immersive
+
+## Introduction
+
+Les solutions **EDR** (*Endpoint Detection and Response*) sont des outils de cybersécurité conçus pour **surveiller, détecter et répondre aux menaces** de sécurité sur les terminaux (ordinateurs, serveurs, appareils mobiles, etc.) au sein d'un réseau. Elles jouent un rôle crucial dans la protection des organisations contre les cyberattaques modernes, souvent sophistiquées et persistantes.
+
+Aspects clés d'une solution EDR :
+
+Détection des menaces en temps réel
+
+Surveillance et collecte de données
+
+Réponse rapide aux incidents
+
+Analyse et investigation post-incident
+
+Automatisation et intelligence artificielle
+
+Intégration avec d'autres outils de sécurité
+
+Parmi les solutions EDR les plus connues : CrowdStrike Falcon, Microsoft Defender for Endpoint, Symantec Endpoint Detection and Response et SentinelOne.
+
+## Objectif du projet
+
+Construire un **laboratoire EDR** avec **Wazuh** sur des machines virtuelles Debian, puis s'en servir pour **penser comme un attaquant afin de mieux se défendre** : installer la solution, déployer des agents, configurer et créer des règles de détection, simuler des attaques et automatiser la réponse pour réduire le temps de neutralisation d'une menace.
+
+## Sommaire
+
+| **Job** | **Thème** | **Ce qui est réalisé** | **Documentation** | **Statut** |
+| --- | --- | --- | --- | --- |
+| **01** | Documentation sur l'EDR | Se documenter sur l'EDR et préparer la documentation pour la soutenance | [JOB01\_documentation\_edr.md](./JOB01_documentation_edr.md) | ✅ |
+| **02** | Installation de la solution EDR | Installer une solution EDR compatible Debian : **Wazuh** | [JOB02\_installation\_wazuh\_debian13.md](./JOB02_installation_wazuh_debian13.md) | ✅ |
+| **03** | VM Debian, agents et règles de détection | Créer plusieurs VM Debian sans GUI, installer et configurer l'agent Wazuh, configurer les règles de détection (fichiers, processus, connexions réseau) | [JOB03\_vm\_debian\_agents\_wazuh.md](./JOB03_vm_debian_agents_wazuh.md) | ✅ |
+| **04** | Simulation d'attaque | Simuler une attaque (Metasploit ou scripts bash), observer la réaction de Wazuh, rédiger un rapport (attaque, détection, mesures de réponse) avec captures des alertes et des logs | [JOB04\_simulation\_attaque.md](./JOB04_simulation_attaque.md) | ⏳ |
+| **05** | Règles de détection personnalisées | Choisir une technique d'attaque non couverte par les règles par défaut, développer des règles personnalisées (agent et serveur), les tester, documenter | [JOB05\_regles\_personnalisees.md](./JOB05_regles_personnalisees.md) | ⏳ |
+| **06** | Réponse automatisée | Configurer une « réponse active » (suppression d'un fichier suspect, arrêt d'un processus malveillant), la déclencher, documenter la logique et son intérêt pour un SOC | [JOB06\_reponse\_active.md](./JOB06_reponse_active.md) | ⏳ |
+| **Bonus** | Pour aller plus loin | Intégrer Wazuh à un SIEM (Elastic Stack) pour une analyse avancée des journaux et des alertes | [BONUS\_integration\_elastic.md](./BONUS_integration_elastic.md) | ⏳ |
+
+✅ réalisé · ⏳ à venir
+
+## Détail des jobs
+
+### Job 01 – Documentation sur l'EDR
+
+Recherche documentaire sur les EDR : définition, architecture, fonctionnalités, différences avec EPP / XDR / MDR, limites et solutions du marché.
+
+### Job 02 – Installation de Wazuh
+
+Mise en place du serveur Wazuh : indexer, manager et dashboard.
+
+### Job 03 – VM Debian, agents et règles de détection
+
+Création de plusieurs VM Debian sans interface graphique, installation de l'agent Wazuh, puis configuration de la surveillance des **fichiers**, des **processus** et des **connexions réseau**.
+
+### Job 04 – Simulation d'attaque
+
+Attaque simulée pour observer la réaction de Wazuh. Le rapport documente l'attaque, les actions de détection et les mesures de réponse, avec captures d'écran des alertes et des logs.
+
+### Job 05 – Règles de détection personnalisées
+
+Au-delà des règles par défaut : choix d'une technique d'attaque, création des règles (fichiers de configuration de l'agent et du serveur), test par simulation, puis documentation (technique, code ou configuration des règles, captures des alertes).
+
+### Job 06 – Réponse automatisée
+
+Un EDR ne fait pas que détecter, il permet aussi d'agir. Une alerte des jobs 04 ou 05 déclenche une réponse active sur la machine concernée, avec explication de la logique mise en place et de son importance pour un SOC.
+
+### Pour aller plus loin
+
+Intégration de Wazuh avec Elastic Stack (SIEM).
+
+## Compétences visées
+
+Administrer et sécuriser les infrastructures systèmes
+
+Participer à la mesure et à l'analyse du niveau de sécurité de l'infrastructure
+
+Mettre en œuvre et optimiser la supervision des infrastructures
+
+## Rendu
+
+Évaluation sous forme de **présentation en soutenance** avec support, devant l'équipe pédagogique.
+
+## Environnement du laboratoire
+
+| **Élément** | **Détail** |
+| --- | --- |
+| EDR | Wazuh 4.14 |
+| Serveur | Indexer + manager + dashboard (installation tout-en-un) |
+| Agents | VM Debian 13 sans interface graphique |
+| Réseau | VM sur le même sous-réseau (réseau pont) |
+
+## Base de connaissances
+
+[Implémenter un EDR en entreprise – Lockself](https://www.lockself.com/blog/implementer-edr-entreprise-guide)
+
+[Qu'est-ce que l'EDR ? – Trend Micro](https://www.trendmicro.com/fr_fr/what-is/xdr/edr.html)
+
+[FortiEDR – Fortinet](https://www.fortinet.com/fr/products/endpoint-security/fortiedr)
+
+[EDR-as-a-Service – Advens](https://www.advens.com/media/securite-operationnelle/edr-informatique/)
+
+[Qu'est-ce que l'EDR ? – IBM](https://www.ibm.com/fr-fr/think/topics/edr)
+
+Job 01 – Documentation sur l'EDR
 
 Projet « Libérer le cyberdétective » – La Plateforme · Novembre 2026
 
