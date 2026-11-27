@@ -101,7 +101,7 @@ Mettre en œuvre et optimiser la supervision des infrastructures
 
 [Qu'est-ce que l'EDR ? – IBM](https://www.ibm.com/fr-fr/think/topics/edr)
 
-Job 01 – Documentation sur l'EDR
+# Job 01 – Documentation sur l'EDR
 
 Projet « Libérer le cyberdétective » – La Plateforme · Novembre 2026
 
